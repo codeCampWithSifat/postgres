@@ -1,0 +1,17 @@
+CREATE Table
+    only_user (
+        user_id SERIAL PRIMARY KEY,
+        user_name VARCHAR(250) UNIQUE NOT NULL,
+        email VARCHAR(250) UNIQUE NOT NULL,
+        age INT DEFAULT 25
+    );
+
+INSERT INTO
+    only_user (user_name, email, age)
+VALUES ('aysha', 'aysha@gmail.com', 52), ('saifa', 'saifa@gmail.com', 50);
+
+-- DELETE all the rows in the table deleting without the table
+
+-- TRUNCATE TABLE only_user
+
+SELECT * FROM only_user;
